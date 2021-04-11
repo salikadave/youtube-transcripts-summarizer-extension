@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "YTSummarize",
+  "description": "An extension to provide summarized transcript of a YouTube Subtitle eligible Video.",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "page_action": {
+    "default_icon": {
+      "16": "images/transcript_summarizer16.png",
+      "32": "images/transcript_summarizer32.png",
+      "48": "images/transcript_summarizer48.png",
+      "128": "images/transcript_summarizer128.png"
+    }
+  },
+  "icons": {
+    "16": "images/transcript_summarizer16.png",
+    "32": "images/transcript_summarizer32.png",
+    "48": "images/transcript_summarizer48.png",
+    "128": "images/transcript_summarizer128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://medium.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
