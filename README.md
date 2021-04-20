@@ -7,6 +7,7 @@ Project Inspiration - [Crio Learn by Doing](https://www.crio.do/projects/python-
 * **Google Chrome Developers**
   * [Message Passing](https://developer.chrome.com/docs/extensions/mv3/messaging/)
   * [Designing the User Interface](https://developer.chrome.com/docs/extensions/mv2/user_interface/)
+  * [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/)
 * **Medium Blogs**
   * [The Ultimate Guide to building Chrome Extensions](https://betterprogramming.pub/the-ultimate-guide-to-building-a-chrome-extension-4c01834c63ec)
   * [Build a simple Google Chrome Extension in few minutes](https://medium.com/tech-tajawal/build-a-simple-google-chrome-extension-in-few-minutes-1f13b600e83e)
