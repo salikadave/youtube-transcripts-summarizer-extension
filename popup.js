@@ -1,14 +1,25 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-  ctaGenerateSummary.addEventListener("click", generateSummary);
+  let summaryCTA = document.getElementById("ctaGenerateSummary");
+  summaryCTA.addEventListener("click", generateSummary);
 });
 
 const generateSummary = () => {
-  console.log("button clicked!");
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, {
+      action: "generate",
+      currentTabUrl: tabs[0].url,
+    });
+  });
 };
 
-// Initialize button with user's preferred color
-let changeColor = document.getElementById("changeColor");
-
-chrome.storage.sync.get("color", ({ color }) => {
-  changeColor.style.backgroundColor = color;
+chrome.runtime.onMessage.addListener(function (message) {
+  if (message.action === "result") {
+    console.log("printing output summary");
+    printOutputSummary(message.summaryText)
+  }
 });
+
+const printOutputSummary = (text) => {
+  const placeholder = document.getElementById("summaryText");
+  placeholder.textContent = text;
+};
