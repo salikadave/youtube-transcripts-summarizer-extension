@@ -16,6 +16,7 @@ chrome.runtime.onMessage.addListener(function (message) {
   if (message.action === "result") {
     console.log("printing output summary");
     printOutputSummary(message.summaryText)
+    // window.open()
   }
 });
 
