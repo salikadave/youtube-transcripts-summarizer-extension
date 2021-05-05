@@ -5,16 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="distro/css/materialize.min.css"
+      media="screen,projection"
+    />
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <div class="wrapper">
-      <h4>YT Summarizer</h4>
-      <p>Add youtube link to summarize text</p>
-      <button id="ctaGenerateSummary">Summarize</button>
-      <p>Summarized Text:</p>
-      <p id="summaryText"></p>
+      <div class="container">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img class="" src="images/transcript_summarizer32.png" />
+          </div>
+          <div class="col s10">
+            <h5>Transcript Summarizer</h5>
+          </div>
+        </div>
+        <!-- <hr /> -->
+        <div class="row">
+          <div class="col s6">
+            <a
+              id="ctaGenerateSummary"
+              class="waves-effect waves-light btn-small disabled"
+              ><i class="material-icons left"
+                ><span class="material-icons-outlined">
+                  closed_caption
+                </span></i
+              >Add Video</a
+            >
+          </div>
+          <div class="col s6">
+            <a class="waves-effect waves-light btn-small"
+              ><i class="material-icons left">list</i>My List</a
+            >
+          </div>
+        </div>
+        <!-- <button id="ctaGenerateSummary">Summarize</button> -->
+      </div>
     </div>
   </body>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="distro/js/materialize.min.js"></script>
   <script src="popup.js"></script>
 </html>
