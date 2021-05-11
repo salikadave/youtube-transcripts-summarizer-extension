@@ -30,7 +30,9 @@ chrome.runtime.onMessage.addListener(function (message) {
   }
 });
 
-const printOutputSummary = (text) => {
+const printOutputSummary = (result) => {
   const placeholder = document.getElementById("summaryText");
-  placeholder.textContent = text;
+  placeholder.classList.add("summaryTextLayout");
+  placeholder.textContent = result.summary;
+  document.getElementById("time").textContent = `${result.time_taken} mins`
 };

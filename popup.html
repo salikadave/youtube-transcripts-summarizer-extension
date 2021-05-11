@@ -18,6 +18,11 @@
       media="screen,projection"
     />
     <link rel="stylesheet" href="popup.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -27,22 +32,22 @@
             <img class="" src="images/transcript_summarizer32.png" />
           </div>
           <div class="col s10">
-            <h5>Transcript Summarizer</h5>
+            <h5 id="main-header">Transcript Summarizer</h5>
           </div>
         </div>
         <!-- <hr /> -->
         <div class="row">
           <div class="col s12">
-            <h6 style="line-height: 1.5rem">
+            <!-- <h6 style="line-height: 1.5rem">
               Stop searching for your passion | Terri Trespicio | TEDxKC
-            </h6>
-            <p>Duration: 10:24</p>
-            <p>Expected Summarization Time: 1-2 mins</p>
+            </h6> -->
+            <!-- <p>Duration: 10:24</p> -->
+            <p class="bigger-text">Expected Summarization Time: 1 - 4 mins</p>
           </div>
           <div class="col s12">
             <a
               id="ctaGenerateSummary"
-              class="waves-effect waves-light btn-small disabled"
+              class="waves-effect waves-light btn-small"
               ><i class="material-icons left"
                 ><span class="material-icons-outlined">
                   closed_caption
@@ -59,16 +64,25 @@
             >
           </div> -->
         </div>
-        <!-- <div class="row">
-          <div id="progressHolder" class="col s12"></div>
-        </div> -->
         <div class="row">
-          <div class="col s12">Video Excerpts:</div>
+          <div id="progressHolder" class="col s12"></div>
         </div>
         <div class="row">
-          <div id="summaryText" class="col s12">
-            <ol>
-              <li>
+          <div class="col s12">
+            <p class="bigger-text"><b>Video Highlights:</b></p>
+            <p class="smaller-text">
+              Summarized in <b><span id="time"></span></b>
+            </p>
+          </div>
+          <div class="col s12">
+            <p id="summaryText" class="bigger-text">
+              <!-- Passion is not a plan, it’s a feeling. And feelings change. You
+              can be passionate about a person one day, a job, and then not
+              passionate the next. We continue to use passion as the yardstick
+              to judge everything by. -->
+            </p>
+            <!-- <ol id="summaryList"> -->
+            <!-- <li>
                 Passion is not a plan, it’s a feeling. And feelings change. You
                 can be passionate about a person one day, a job, and then not
                 passionate the next. We continue to use passion as the yardstick
@@ -85,8 +99,8 @@
                 Don't wait. Listen to my mother. Just start doing. Because to
                 live a life full of meaning and value you don’t follow you
                 passion, your passion follows you.
-              </li>
-            </ol>
+              </li> -->
+            <!-- </ol> -->
           </div>
         </div>
 
